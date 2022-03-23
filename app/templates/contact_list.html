@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body_content %}
+<section id="one" class="wrapper">
+    <div class="inner">
+        <!-- Table -->
+        <h3>Table of Contact List</h3>
+
+        <h4>Default</h4>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Section</th>
+                    <th>Priority</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for name, department, priority in contact_list %}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{department}}</td>
+                    <td>{{priority}}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+{% endblock %}
